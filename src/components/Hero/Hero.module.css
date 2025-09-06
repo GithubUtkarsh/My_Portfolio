@@ -15,12 +15,12 @@
 .animated_text {
   font-size: 34px;
   margin: 10px auto;
-  font-weight: bold;
+  font-weight: light;
   color: #BF40BF;
   text-shadow:
    0 0 3px #BF40BF,
-    0 0 6px #BF40BF,
-    0 0 12px #BF40BF;
+    2px 2px 2px #BF40BF,
+    0 0 2px #BF40BF;
 }
 
 .content {
@@ -156,11 +156,21 @@
   z-index: 0;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 730px) {
   .container {
     flex-direction: column-reverse;
   }
 
+  .animated_text {
+  font-size: 34px;
+  margin: 10px auto;
+  font-weight: bold;
+  color: #BF40BF;
+  text-shadow:
+   1px 0 1px #BF40BF,
+    1px 1px 3px #BF40BF,
+    0 1px 2px #BF40BF;
+  }
   .content {
     align-items: center;
   }
