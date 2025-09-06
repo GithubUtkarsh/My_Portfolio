@@ -74,10 +74,11 @@
 
 @media screen and (max-width: 830px) {
   .container {
-    background-color: transparent;
+    /* background-color: transparent; */
+    width: 95%;
     padding-left: 0;
-    padding-right: 0;
-    margin-top: 0px;
+    padding: 20px;
+    margin:auto;
   }
 
   .content {
@@ -89,6 +90,9 @@
     display: none;
   }
 
+  .title{
+   font-size: 2.7rem;
+  }
   .aboutItems {
     margin-top: 29px;
   }
@@ -97,9 +101,16 @@
     padding-left: 0;
     padding-right: 0;
   }
+  .aboutItem h3{
+    font-size: 1.5rem;
+  }
+  .aboutItem p{
+    font-size: 1rem;
+  }
 
   .body {
+    padding: 0;
     margin: 0;
-    padding: 1px 0;
+    height: 44vh;
   }
 }

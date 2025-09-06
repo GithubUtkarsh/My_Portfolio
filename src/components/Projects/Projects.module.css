@@ -15,7 +15,7 @@
   font-variant: small-caps;
   padding: 20px;
   margin-bottom: 60px;
-   background: linear-gradient(135deg, #64ffda 0%, #7c4dff 100%);
+  background: linear-gradient(135deg, #64ffda 0%, #7c4dff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,11 +31,9 @@
 }
 
 .projectCard {
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(145deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -78,11 +76,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(102, 126, 234, 0.8) 0%,
-    rgba(118, 75, 162, 0.8) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(102, 126, 234, 0.8) 0%,
+      rgba(118, 75, 162, 0.8) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   display: flex;
@@ -181,4 +177,39 @@
 .projectLink:hover {
   background-color: rgba(102, 126, 234, 0.8);
   transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .imageContainer {
+    height: 150px;
+  }
+
+  .projectTitle {
+    font-size: 18px;
+  }
+
+  .projectDescription {
+    font-size: 12px;
+  }
+
+  .techTag {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .overlayButton {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .categoryBadge {
+    padding: 3px 8px;
+    font-size: 10px;
+  }
 }
