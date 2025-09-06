@@ -1,0 +1,168 @@
+@import "../../vars.css";
+
+.container {
+  background: linear-gradient(135deg, #020203 0%, #16213e 50%, #000000 100%);
+  padding: 75px 20px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.text {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.text h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #64ffda 0%, #7c4dff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  font-variant: small-caps;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.text h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #64ffda, #7c4dff);
+  border-radius: 2px;
+}
+
+.text p {
+  font-size: 1.3rem;
+  color: #b8c6db;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 30px;
+  /* background: rgba(255, 255, 255, 0.05); */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.link:hover::before {
+  left: 100%;
+}
+
+.link:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(100, 255, 218, 0.2);
+}
+
+.link img {
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s ease;
+}
+
+.link:hover img {
+  transform: scale(1.2);
+}
+.githubWhite {
+  filter: invert(1) brightness(2);
+}
+.link a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.link:hover a {
+  color: #6469ff;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 20px 40px;
+  }
+  
+  .text h2 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+  
+  .text p {
+    font-size: 1.1rem;
+  }
+  
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .link {
+    width: 100%;
+    max-width: 350px;
+    justify-content: center;
+    padding: 18px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h2 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .link {
+    padding: 15px 20px;
+  }
+  
+  .link a {
+    font-size: 1rem;
+  }
+}
