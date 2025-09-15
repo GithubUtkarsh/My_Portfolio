@@ -31,7 +31,7 @@ export const Hero = () => {
         <p className={styles.description}>
           I love building clean and user-friendly websites. I enjoy working on both the front-end and back-end to deliver complete web solutions.
         </p>
-        <a href="mailto:kumarutkarsh273@email.com" className={styles.contactBtn}>
+        <a href="mailto:kumarutkarsh273@gmail.com" className={styles.contactBtn}>
           Contact Me
         </a>
       </div>
