@@ -8,6 +8,7 @@
   overflow: hidden;
   align-items: center;
   justify-content: space-between;
+  /* border: 1px solid green; */
   padding: 50px 0;
   /* z-index: 1; */
 }
@@ -72,8 +73,8 @@
 
 .imgContainer {
   /* border: 2px solid red; */
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: auto;
   margin: 30px;
   border-radius: 50%;
   overflow: hidden;
