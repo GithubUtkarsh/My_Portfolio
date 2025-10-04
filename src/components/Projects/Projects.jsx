@@ -1,10 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./Projects.module.css";
 import projects from "../../data/projects.js";
 
 export const Projects = () => {
-  const [hoveredCard, setHoveredCard] = React.useState(null);
-  const [hoveredLink, setHoveredLink] = React.useState(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredLink, setHoveredLink] = useState(null);
 
   return (
     <section className={styles.container} id="project">
@@ -49,7 +50,7 @@ export const Projects = () => {
               </div>
 
               <div className={styles.projectLinks}>
-                {project.id !== 3 && (   // 👈 replace 3 with the id you want to hide it for
+                {project.id !== 3 && (   // 👈 replace 3 with the id you want to hide it for  
                   <a
                     href={project.liveLink}
                     className={`${styles.projectLink} ${hoveredLink === `live-${project.id}` ? styles.projectLinkHover : ""
